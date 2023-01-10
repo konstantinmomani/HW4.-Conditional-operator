@@ -5,6 +5,7 @@ public class Main {
         task3();
     }
     public static void task1 () {
+        System.out.println("Задача 1");
         /*Вариант 1*/
         int age1 = 18;
         int age2 = 17;
@@ -25,6 +26,7 @@ public class Main {
         }
     }
     public static void task2 () {
+        System.out.println("Задача 2");
         /*Вариант 1*/
         int temp1 = 2;
         int temp2 = 6;
@@ -43,6 +45,7 @@ public class Main {
         }
     }
     public static void task3 () {
+        System.out.println("Задача 3");
         /*Вариант 1*/
         int speedLimit = 60;
         int speedCar1 = 80;
