@@ -4,6 +4,8 @@ public class Main {
         task2();
         task3();
         task4();
+        task5();
+        task6();
     }
     public static void task1 () {
         System.out.println("Задача 1");
@@ -80,6 +82,42 @@ public class Main {
             System.out.println("Если возраст человека равен " + humanAge + " ,то ему нужно ходить в университет");
         } else if (shouldGoToWork) {
             System.out.println("Если возраст человека равен " + humanAge + " ,то ему пора ходить на работу");
+        }
+    }
+    public static void task5 () {
+        System.out.println("Задача5");
+        int childAge = 2;
+        boolean canUseAttractionWithoutAdult = childAge > 14;
+        boolean canUseAttractionWithAdult = childAge > 5 && childAge < 14;
+        if (canUseAttractionWithoutAdult) {
+            System.out.println("Если возраст ребёнка равен " + childAge +
+                    ", можно кататься на атракционе без сопровождения взрослого");
+        } else if (canUseAttractionWithAdult) {
+            System.out.println("Если возраст ребёнка равен " + childAge +
+                    ", можно кататься на атракционе в сопровождении взрослого");
+        } else {
+            System.out.println("Если возраст ребёнка равен " + childAge + ", нельзя кататься на атракционе");
+        }
+    }
+    public static void task6 () {
+        System.out.println("Задача6");
+        int carriageCapacity = 102;
+        int seatingCarriageCapacity = 60;
+        int standingCarriageCapacity = carriageCapacity % seatingCarriageCapacity;
+        int occupiedSeatingCapacity = 55;
+        int occupiedStandingCapacity = 42;
+        int occupiedCarriageCapacity = occupiedSeatingCapacity + occupiedStandingCapacity;
+        boolean vacantSeatingCapacity = seatingCarriageCapacity > occupiedSeatingCapacity;
+        boolean vacantStandingCapacity = standingCarriageCapacity > occupiedStandingCapacity;
+        boolean vacantCarriageCapacity = carriageCapacity > occupiedCarriageCapacity;
+        if (vacantSeatingCapacity) {
+            System.out.println("В вагоне есть сидячие места");
+        }
+        if (vacantStandingCapacity) {
+            System.out.println("В вагоне есть стоячие места");
+        }
+        else {
+            System.out.println("В вагоне нет мест");
         }
     }
 }
