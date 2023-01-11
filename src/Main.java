@@ -123,9 +123,9 @@ public class Main {
     }
     public static void task7 () {
         System.out.println("Задача7");
-        int one = 56;
-        int two = 8;
-        int three = 12;
+        int one = 4;
+        int two = 12;
+        int three = 24;
         boolean maxOne = one > two && one > three;
         boolean maxTwo = two > one && two > three;
         if (maxOne) {
