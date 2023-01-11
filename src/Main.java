@@ -104,20 +104,21 @@ public class Main {
         int carriageCapacity = 102;
         int seatingCarriageCapacity = 60;
         int standingCarriageCapacity = carriageCapacity % seatingCarriageCapacity;
-        int occupiedSeatingCapacity = 55;
+        int occupiedSeatingCapacity = 60;
         int occupiedStandingCapacity = 42;
         int occupiedCarriageCapacity = occupiedSeatingCapacity + occupiedStandingCapacity;
         boolean vacantSeatingCapacity = seatingCarriageCapacity > occupiedSeatingCapacity;
         boolean vacantStandingCapacity = standingCarriageCapacity > occupiedStandingCapacity;
-        boolean vacantCarriageCapacity = carriageCapacity > occupiedCarriageCapacity;
+        boolean vacantCarriageCapacity = carriageCapacity == occupiedCarriageCapacity;
         if (vacantSeatingCapacity) {
             System.out.println("В вагоне есть сидячие места");
         }
         if (vacantStandingCapacity) {
             System.out.println("В вагоне есть стоячие места");
         }
-        else {
+        else if (vacantCarriageCapacity) {
             System.out.println("В вагоне нет мест");
         }
     }
+
 }
